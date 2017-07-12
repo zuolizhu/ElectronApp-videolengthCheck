@@ -3,4 +3,20 @@
 </head>
 <body>
   <h1>Video Length Checker</h1>
+  <form>
+    <div>
+      <label>
+        Select a video
+      </label>
+      <input type="file" accept="video/*" />
+    </div>
+    <button type="submit">Get the length of this video</button>
+  </form>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const fileInfo = document.querySelector('input').files[0];
+    });
+  </script>
 </body>
