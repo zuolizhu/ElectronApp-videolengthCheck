@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zuolizhu/ElectronApp-videolengthCheck#readme",
   "dependencies": {
-    "electron": "^1.6.11"
+    "electron": "^1.6.11",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
