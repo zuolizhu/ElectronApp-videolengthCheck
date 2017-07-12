@@ -1,7 +1,8 @@
 const electron = require('electron');
 
-const { app } = electron;
+//To create a new browser window and show content to user
+const { app, BrowserWindow } = electron;
 
 app.on('ready', () => {
-  console.log('App is now ready');
+  new BrowserWindow({});
 });
