@@ -13,6 +13,8 @@
     <button type="submit">Get info</button>
   </form>
 
+  <h1 id="result"></h1>
+
   <script>
     const electron = require('electron');
     const { ipcRenderer } = electron;
@@ -21,8 +23,14 @@
       event.preventDefault();
       const { path } = document.querySelector('input').files[0];
 
+      //send video path into electron app
       ipcRenderer.send('videoSubmited', path);
-
     });
+
+    //listen the event then display the result
+    ipcRenderer.on('videoMetadata', (event, duration) => {
+      document.querySelector('#result').innerHTML = `Video is ${duration} seconds`;
+    });
+
   </script>
 </body>
